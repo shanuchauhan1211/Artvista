@@ -25,7 +25,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/User/logIn", {
+      const response = await axios.post("https://artvista-lovat.vercel.app/User/logIn", {
         name: logUser.name,
         password: logUser.password,
       });
@@ -79,7 +79,7 @@ else{
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/User/NewUser", {
+      const response = await axios.post("https://artvista-lovat.vercel.app/User/NewUser", {
         name: signUser.name,
         password: signUser.password,
         email: signUser.email,

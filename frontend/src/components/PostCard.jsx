@@ -27,7 +27,7 @@ useEffect(() => {
     const fetchDatas = async () => {
         try {
           setIsLoading(false);
-          const response = await axios.get(`http://localhost:5000/Post/showPost/${accountId}`);
+          const response = await axios.get(`https://artvista-lovat.vercel.app/Post/showPost/${accountId}`);
           setData(response.data);
           console.log(response);
       
@@ -42,7 +42,7 @@ useEffect(() => {
         var confirmDelete = window.confirm("Are you sure you wanna delete this post ?");
         if(confirmDelete){
          try {
-          await axios.delete(`http://localhost:5000/Post/PostDelete/${id}`);
+          await axios.delete(`https://artvista-lovat.vercel.app/Post/PostDelete/${id}`);
           alert("Post Deleted Successfully");
           window. location. reload();
           

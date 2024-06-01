@@ -20,7 +20,7 @@ export default function AddFriends() {
 
   const fetchdata = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/User/getAllUser");
+      const response = await axios.get("https://artvista-lovat.vercel.app/User/getAllUser");
       setData(response.data);
       console.log(response.data);
     } catch (error) {
@@ -34,7 +34,7 @@ export default function AddFriends() {
     if (sure) {
       try {
         const response = await axios.post(
-          `http://localhost:5000/User/Pending/${currentUser.id}`,
+          `https://artvista-lovat.vercel.app/User/Pending/${currentUser.id}`,
           {
             pending: friendId,
           }
@@ -48,7 +48,7 @@ export default function AddFriends() {
 
       try {
         const response = await axios.post(
-          `http://localhost:5000/User/Inviation/${friendId}`,
+          `https://artvista-lovat.vercel.app/User/Inviation/${friendId}`,
           {
             invitation: currentUser.id,
           }

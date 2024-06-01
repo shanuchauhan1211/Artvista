@@ -72,7 +72,7 @@ const handleUpload = async(event)=>{
 
 try {
   
-  const response = await axios.post("http://localhost:5000/Post/createPost", formData, {
+  const response = await axios.post("https://artvista-lovat.vercel.app/Post/createPost", formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }});

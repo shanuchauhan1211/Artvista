@@ -12,7 +12,7 @@ const NotificationProvider = ({ children }) => {
     const timeInterval = setInterval(async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/User/GetInvitations/${token_object.id}`
+          `https://artvista-lovat.vercel.app/User/GetInvitations/${token_object.id}`
         );
         console.log(response.data);
         // // console.log(response.data.length);
